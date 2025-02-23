@@ -430,8 +430,8 @@ msgstr "9951 - 聖馬力諾增值稅號"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9952
-msgid "9952 - Turkey VAT number"
-msgstr "9952 - 土耳其增值稅號"
+msgid "9952 - Türkiye VAT number"
+msgstr "9952 - 土耳其增值稅編號"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9953
@@ -779,7 +779,7 @@ msgstr "Peppol 終端點"
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_partner__peppol_eas
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_users__peppol_eas
 msgid "Peppol e-address (EAS)"
-msgstr "Peppol電子地址(EAS)"
+msgstr "Peppol 電子地址（EAS）"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_config_settings__invoice_is_ubl_cii

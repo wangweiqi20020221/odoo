@@ -364,7 +364,7 @@ class PurchaseOrderLine(models.Model):
 
             # record product names to avoid resetting custom descriptions
             default_names = []
-            vendors = line.product_id._prepare_sellers({})
+            vendors = line.product_id._prepare_sellers(params=params)
             product_ctx = {'seller_id': None, 'partner_id': None, 'lang': get_lang(line.env, line.partner_id.lang).code}
             default_names.append(line._get_product_purchase_description(line.product_id.with_context(product_ctx)))
             for vendor in vendors:
@@ -438,8 +438,7 @@ class PurchaseOrderLine(models.Model):
             price_unit = price_unit * (1 - self.discount / 100)
         if self.taxes_id:
             qty = self.product_qty or 1
-            price_unit_prec = self.env['decimal.precision'].precision_get('Product Price')
-            price_unit = self.taxes_id.with_context(round=False).compute_all(price_unit, currency=self.order_id.currency_id, quantity=qty, product=self.product_id)['total_void']
+            price_unit = self.taxes_id.with_context(round=False, round_base=False).compute_all(price_unit, currency=self.order_id.currency_id, quantity=qty, product=self.product_id)['total_void']
             price_unit = price_unit / qty
         if self.product_uom.id != self.product_id.uom_id.id:
             price_unit *= self.product_uom.factor / self.product_id.uom_id.factor

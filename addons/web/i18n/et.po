@@ -1438,6 +1438,13 @@ msgid "BACK arrow"
 msgstr "TAGASI nool"
 
 #. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/search/control_panel/control_panel.js:0
+#, python-format
+msgid "Back to “%s”"
+msgstr ""
+
+#. module: web
 #: model:ir.model.fields,field_description:web.field_base_document_layout__layout_background_image
 msgid "Background Image"
 msgstr "Taustapilt"
@@ -3435,6 +3442,14 @@ msgstr "Mine URL'ile"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/views/fields/google_slide_viewer.js:0
+#: code:addons/web/static/src/views/fields/google_slide_viewer.xml:0
+#, python-format
+msgid "Google Slide Viewer"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/views/graph/graph_view.js:0
 #, python-format
 msgid "Graph"
@@ -4627,7 +4642,7 @@ msgstr "Muuda tingimusi"
 #: code:addons/web/static/src/views/fields/domain/domain_field.xml:0
 #, python-format
 msgid "Modify filter"
-msgstr ""
+msgstr "Muuda filtrit"
 
 #. module: web
 #. odoo-javascript
@@ -6039,7 +6054,7 @@ msgstr "sql kirje"
 #: code:addons/web/static/src/core/debug/profiling/profiling_item.xml:0
 #, python-format
 msgid "Record traces"
-msgstr ""
+msgstr "Salvesta jälgimine"
 
 #. module: web
 #. odoo-javascript
@@ -6581,6 +6596,13 @@ msgstr "Vali kõik"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/views/list/list_controller.xml:0
+#, python-format
+msgid "Select all records matching the search"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/core/datetime/datetime_picker.js:0
 #, python-format
 msgid "Select century"
@@ -6776,7 +6798,7 @@ msgstr "Näita alamväli"
 #: code:addons/web/static/src/views/fields/datetime/datetime_field.js:0
 #, python-format
 msgid "Show time"
-msgstr ""
+msgstr "Kuva aeg"
 
 #. module: web
 #. odoo-javascript
@@ -22922,7 +22944,7 @@ msgstr "uus vaheleht"
 #: code:addons/web/static/src/views/view_dialogs/export_data_dialog.xml:0
 #, python-format
 msgid "new_template"
-msgstr ""
+msgstr "uus_mall"
 
 #. module: web
 #. odoo-javascript
@@ -27556,7 +27578,7 @@ msgstr "valitud kirjet,"
 #: code:addons/web/static/src/core/debug/debug_menu_items.xml:0
 #, python-format
 msgid "self"
-msgstr ""
+msgstr "ise"
 
 #. module: web
 #. odoo-javascript

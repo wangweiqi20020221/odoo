@@ -32,6 +32,7 @@ export class Homepage extends Component {
         this.state = useState({ loading: true, waitRestart: false });
         this.data = useState({});
         this.store.advanced = localStorage.getItem("showAdvanced") === "true";
+        this.store.dev = new URLSearchParams(window.location.search).has("debug");
 
         onWillStart(async () => {
             await this.loadInitialData();
@@ -86,7 +87,7 @@ export class Homepage extends Component {
     </LoadingFullScreen>
 
     <div t-if="!this.state.loading" class="w-100 d-flex flex-column align-items-center justify-content-center" style="background-color: #F1F1F1; height: 100vh">
-        <div class="bg-white p-4 rounded overflow-auto position-relative" style="min-width: 600px;">
+        <div class="bg-white p-4 rounded overflow-auto position-relative" style="width: 100%; max-width: 600px;">
             <div class="position-absolute end-0 top-0 mt-3 me-4 d-flex gap-1">
                 <IconButton onClick.bind="toggleAdvanced" icon="this.store.advanced ? 'fa-cog' : 'fa-cogs'" />
                 <IconButton onClick.bind="restartOdooService" icon="'fa-power-off'" />
@@ -105,7 +106,7 @@ export class Homepage extends Component {
 			</SingleData>
             <SingleData t-if="this.store.advanced" name="'Version'" value="this.data.version" icon="'fa-microchip'">
                 <t t-set-slot="button">
-                    <UpdateDialog t-if="this.store.isLinux" />
+                    <UpdateDialog />
                 </t>
             </SingleData>
             <SingleData t-if="this.store.advanced" name="'IP address'" value="this.data.ip" icon="'fa-globe'" />

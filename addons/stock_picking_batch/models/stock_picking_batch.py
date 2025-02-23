@@ -37,7 +37,7 @@ class StockPickingBatch(models.Model):
         'stock.move', string="Stock moves", compute='_compute_move_ids')
     move_line_ids = fields.One2many(
         'stock.move.line', string='Stock move lines',
-        compute='_compute_move_line_ids', inverse='_set_move_line_ids')
+        compute='_compute_move_line_ids', inverse='_set_move_line_ids', search='_search_move_line_ids')
     state = fields.Selection([
         ('draft', 'Draft'),
         ('in_progress', 'In progress'),
@@ -99,6 +99,9 @@ class StockPickingBatch(models.Model):
     def _compute_move_line_ids(self):
         for batch in self:
             batch.move_line_ids = batch.picking_ids.move_line_ids
+
+    def _search_move_line_ids(self, operator, value):
+        return [('picking_ids.move_line_ids',operator,value)]
 
     @api.depends('state', 'move_ids', 'picking_type_id')
     def _compute_show_allocation(self):
@@ -165,7 +168,7 @@ class StockPickingBatch(models.Model):
             if batch_without_picking_type:
                 picking = self.picking_ids and self.picking_ids[0]
                 batch_without_picking_type.picking_type_id = picking.picking_type_id.id
-        if vals.get('user_id'):
+        if 'user_id' in vals:
             self.picking_ids.assign_batch_user(vals['user_id'])
         return res
 

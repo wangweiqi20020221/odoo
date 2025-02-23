@@ -38,3 +38,10 @@ contacting us, please try to put together a proof-of-concept attack and take a c
 what's really at risk.
 If the proposed attack scenario turns out unrealistic, your report will probably be rejected.
 Also be sure to review our list of [non-qualifying issues](https://www.odoo.com/security-report#what).
+
+### 此分支使用向导
+1. 找到你服务器中odoo源代码的目录（如我的是/usr/lib/python3/dist-packages/odoo）
+2. 备份原来的odoo文件夹
+3. 把此项目目录中odoo文件夹中的文件替换掉odoo源代码的文件
+4. 把addons文件夹移动到odoo文件夹中
+5. 启动odoo（sudo service odoo start）

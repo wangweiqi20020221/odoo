@@ -10,6 +10,7 @@
 # Ivica Dimjašević <ivica.dimjasevic@storm.hr>, 2024
 # Martin Trigaux, 2024
 # Tina Milas, 2024
+# Servisi RAM d.o.o. <support@servisiram.hr>, 2024
 # Bole <bole@dajmi5.com>, 2024
 # 
 msgid ""
@@ -360,7 +361,7 @@ msgstr "Nazad na prijavu"
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.alert_login_new_device
 msgid "Browser"
-msgstr ""
+msgstr "Pretraživač"
 
 #. module: auth_signup
 #. odoo-python
@@ -501,7 +502,7 @@ msgstr "Omogućite prijavu svojim korisnicima kako bi vidjeli svoje dokumente"
 #: model_terms:ir.ui.view,arch_db:auth_signup.alert_login_new_device
 #: model_terms:ir.ui.view,arch_db:auth_signup.reset_password_email
 msgid "Marc Demo"
-msgstr ""
+msgstr "Marc Demo"
 
 #. module: auth_signup
 #. odoo-python
@@ -748,6 +749,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:auth_signup.field_res_users__state
 msgid "Status"
 msgstr "Status"
+
+#. module: auth_signup
+#. odoo-python
+#: code:addons/auth_signup/controllers/main.py:0
+#: code:addons/auth_signup/controllers/main.py:0
+#, python-format
+msgid "Suspicious activity detected by Google reCaptcha."
+msgstr ""
 
 #. module: auth_signup
 #: model:ir.model.fields,field_description:auth_signup.field_res_config_settings__auth_signup_template_user_id

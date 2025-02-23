@@ -5,7 +5,7 @@
 # Translators:
 # Sarah Park, 2024
 # Wil Odoo, 2024
-# Daye Jeong, 2024
+# Daye Jeong, 2025
 # 
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Daye Jeong, 2024\n"
+"Last-Translator: Daye Jeong, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1528,6 +1528,20 @@ msgid ""
 "Account %s does not allow reconciliation. First change the configuration of "
 "this account to allow it."
 msgstr "%s 항목은 조정할 수 없습니다. 허용하도록 환경 설정을 변경하세요."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr "계정 %s는 지급 유형이지만 판매 작업에서 사용되고 있습니다."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr "계정 %s는 미수금 유형이지만 구매 작업에 사용되고 있습니다."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_avatax
@@ -3537,6 +3551,13 @@ msgstr "매출 전표가 아니면 매출 문서를 생성할 수 없습니다."
 
 #. module: account
 #. odoo-python
+#: code:addons/account/wizard/accrued_orders.py:0
+#, python-format
+msgid "Cannot create an accrual entry with orders in different currencies."
+msgstr "다른 통화로 된 주문으로 적립 내역을 만들 수 없습니다."
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid ""
@@ -5070,11 +5091,6 @@ msgid "DELIVERED DUTY PAID"
 msgstr "관세 지급 인도 조건 (DELIVERED DUTY PAID)"
 
 #. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__down
-msgid "DOWN"
-msgstr "다운"
-
-#. module: account
 #: model:ir.ui.menu,name:account.menu_board_journal_1
 msgid "Dashboard"
 msgstr "현황판"
@@ -5800,6 +5816,11 @@ msgstr "도메인 수식 바로 가기"
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Domestic country of your accounting"
 msgstr "회계 상의 소재지 국가입니다."
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__down
+msgid "Down"
+msgstr "아래로"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_send__checkbox_download
@@ -7063,11 +7084,6 @@ msgstr "그룹별 기능은 집계 엔진에서 지원되지 않습니다. '%s'�
 #: model:ir.model.fields,field_description:account.field_account_report__filter_growth_comparison
 msgid "Growth Comparison"
 msgstr "성장 비교"
-
-#. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__half-up
-msgid "HALF-UP"
-msgstr "하프-업"
 
 #. module: account
 #: model:ir.model,name:account.model_ir_http
@@ -9513,6 +9529,11 @@ msgstr "검색 가능한 이름"
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Navigate easily through reports and see what is behind the numbers"
 msgstr "간편하게 보고서를 검토하고 수치가 의미하는 내용을 파악합니다."
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__half-up
+msgid "Nearest"
+msgstr "가장 가까운"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__need_cancel_request
@@ -12207,6 +12228,7 @@ msgstr "이 페이지를 저장 후 다시 돌아와서 기능을 설정하세�
 #. module: account
 #. odoo-python
 #: code:addons/account/models/account_payment.py:0
+#: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid "Scan me with your banking app."
 msgstr "뱅킹 앱으로 스캔하십시오."
@@ -12679,6 +12701,11 @@ msgstr "서비스"
 #, python-format
 msgid "Set a price"
 msgstr "가격을 설정하세요."
+
+#. module: account
+#: model:ir.model.fields,help:account.field_res_partner__use_partner_credit_limit
+msgid "Set a value greater than 0.0 to activate a credit limit check"
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account_tag__active
@@ -13669,6 +13696,15 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr "사용 가능 여부가 '국가 일치' 로 설정되어 있으나 국가 항목이 설정되지 않았습니다."
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid "The Bill/Refund date is required to validate this document."
@@ -13739,9 +13775,9 @@ msgstr "지급 조건에는 백분율 항목이 있어야 하며 백분율 합�
 #: code:addons/account/models/chart_template.py:0
 #, python-format
 msgid ""
-"The Syscohada chart template shouldn't be selected directly. Instead, you "
-"should directly select the chart template related to your country."
-msgstr "Syscohada 차트 템플릿을 직접 선택할 수 없습니다. 대신 해당 국가에 맞는 차트 템플릿을 선택하세요."
+"The %s chart template shouldn't be selected directly. Instead, you should "
+"directly select the chart template related to your country."
+msgstr "%s 차트 템플릿을 직접 선택할 수 없습니다. 대신 해당 국가에 맞는 차트 템플릿을 선택하세요."
 
 #. module: account
 #. odoo-python
@@ -15316,8 +15352,9 @@ msgstr "이동 후: %s"
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid ""
 "Trigger alerts when creating Invoices and Sales Orders for Partners with a "
-"Total Receivable amount exceeding a limit."
-msgstr "협력사의 미수금 총액 한도가 초과된 경우, 청구서나 판매주문서를 생성할 때 주의 알림을 표시합니다."
+"Total Receivable amount exceeding a limit.Set a value greater than 0.0 to "
+"activate a credit limit check"
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -15384,11 +15421,6 @@ msgstr ""
 #: model:ir.model.fields,help:account.field_res_partner_bank__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr "레코드에 있는 예외 활동의 유형입니다."
-
-#. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__up
-msgid "UP"
-msgstr "위로"
 
 #. module: account
 #. odoo-python
@@ -15565,6 +15597,11 @@ msgstr "신뢰할 수 없는 결제 수"
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "UoM"
 msgstr "단위"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__up
+msgid "Up"
+msgstr "위로"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
@@ -16328,6 +16365,13 @@ msgid ""
 "You can't create a new statement line without a suspense account set on the "
 "%s journal."
 msgstr "%s 전표에 가계정을 설정하지 않으면 새로운 명세서 내역을 생성할 수 없습니다."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_payment_register.py:0
+#, python-format
+msgid "You can't create payments for entries belonging to different branches."
+msgstr "다른 지점의 항목에 대해 결제를 생성할 수 없습니다."
 
 #. module: account
 #. odoo-python

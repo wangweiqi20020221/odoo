@@ -337,7 +337,7 @@ class Website(models.Model):
         :param url: the url to check
         :return: True if the url has to be indexed, False otherwise
         """
-        return get_base_domain(url, True) == get_base_domain(self.domain, True)
+        return get_base_domain(url.lower(), True) == get_base_domain(self.domain.lower(), True)
 
     # ----------------------------------------------------------
     # Configurator
@@ -355,7 +355,7 @@ class Website(models.Model):
 
     def _OLG_api_rpc(self, route, params):
         # For text content generation
-        return self._api_rpc(route, params, 'website.olg_api_endpoint', DEFAULT_OLG_ENDPOINT, timeout=20)
+        return self._api_rpc(route, params, 'website.olg_api_endpoint', DEFAULT_OLG_ENDPOINT, timeout=45)
 
     def get_cta_data(self, website_purpose, website_type):
         return {'cta_btn_text': False, 'cta_btn_href': '/contactus'}
@@ -1328,9 +1328,9 @@ class Website(models.Model):
 
         for rule in router.iter_rules():
             if 'sitemap' in rule.endpoint.routing and rule.endpoint.routing['sitemap'] is not True:
-                if rule.endpoint.func in sitemap_endpoint_done:
+                if rule.endpoint.func.__func__ in sitemap_endpoint_done:
                     continue
-                sitemap_endpoint_done.add(rule.endpoint.func)
+                sitemap_endpoint_done.add(rule.endpoint.func.__func__)
 
                 func = rule.endpoint.routing['sitemap']
                 if func is False:

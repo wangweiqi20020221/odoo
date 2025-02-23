@@ -5,8 +5,8 @@
 # Translators:
 # Martin Trigaux, 2023
 # Pak Wai Ho, 2024
-# Wil Odoo, 2024
-# Tony Ng, 2024
+# Tony Ng, 2025
+# Wil Odoo, 2025
 # 
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 10:28+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Tony Ng, 2024\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1151,15 +1151,9 @@ msgid ""
 "e.g. this option can be useful to share Product description files.\n"
 "Confirmed order: the document will be sent to and accessible by customers.\n"
 "e.g. this option can be useful to share User Manual or digital content bought on ecommerce. \n"
-"Inside quote: The document will be included in the pdf of the quotation between the header pages and the quote table. "
+"Inside quote: The document will be included in the pdf of the quotation \n"
+"and sale order between the header pages and the quote table. "
 msgstr ""
-"允許你在銷售過程中，與客戶共享文件。\n"
-"如果不想與銷售客戶分享此文件，請將其留空。\n"
-"「報價單」：文件將傳送給客戶，客戶可隨時存取查閱。\n"
-"例如：若想分享產品資料/描述的文件，此選項很有用。\n"
-"「已確認訂單」：文件將傳送給客戶，供客戶存取查閱。\n"
-"例如：若想傳送使用手冊，或交付在電子商務平台購買的數碼/電子內容，此選項便很有用。\n"
-"「報價單內夾附」：文件會加入報價單的 pdf 中，放在標題頁與報價表之間。"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_payment_link_wizard__amount_paid
@@ -1201,7 +1195,7 @@ msgstr "待開立應收憑單的報價金額"
 #: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv__amount_to_invoice
 #: model:ir.model.fields,field_description:sale.field_sale_order__amount_to_invoice
 msgid "Amount to invoice"
-msgstr "待開立應收憑單金額"
+msgstr "待開立發票金額"
 
 #. module: sale
 #: model_terms:ir.actions.act_window,help:sale.action_orders_upselling
@@ -1297,7 +1291,7 @@ msgstr "成本"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order__message_attachment_count
 msgid "Attachment Count"
-msgstr "附件數"
+msgstr "附件數目"
 
 #. module: sale
 #: model:ir.model,name:sale.model_product_attribute_value
@@ -1323,7 +1317,7 @@ msgstr "已授權的交易"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_res_config_settings__automatic_invoice
 msgid "Automatic Invoice"
-msgstr "自動開立應收憑單"
+msgstr "自動發票"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
@@ -2332,7 +2326,7 @@ msgstr "全額<br/>"
 #: model:ir.model.fields.selection,name:sale.selection__sale_report__invoice_status__invoiced
 #: model_terms:ir.ui.view,arch_db:sale.view_order_product_search
 msgid "Fully Invoiced"
-msgstr "已開具全額應收憑單"
+msgstr "已全數開立發票"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.view_sales_order_filter
@@ -2529,7 +2523,7 @@ msgstr "無效的簽署資料."
 #: code:addons/sale/models/account_move.py:0
 #, python-format
 msgid "Invoice %s paid"
-msgstr "應收憑單 %s 已付"
+msgstr "發票 %s 已付款"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order__partner_invoice_id
@@ -2651,7 +2645,7 @@ msgstr "發票"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content
 msgid "Invoicing Address"
-msgstr "應收憑單地址"
+msgstr "發票地址"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
@@ -3044,7 +3038,7 @@ msgstr "備註"
 #: model:ir.model.fields.selection,name:sale.selection__sale_order_line__invoice_status__no
 #: model:ir.model.fields.selection,name:sale.selection__sale_report__invoice_status__no
 msgid "Nothing to Invoice"
-msgstr "沒有要開立應收憑單的"
+msgstr "沒有項目需要開立發票"
 
 #. module: sale
 #. odoo-javascript
@@ -3239,7 +3233,7 @@ msgstr "訂單確認"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_advance_payment_inv__count
 msgid "Order Count"
-msgstr "銷售訂單數量"
+msgstr "訂單數目"
 
 #. module: sale
 #. odoo-python
@@ -3299,7 +3293,7 @@ msgstr "訂單由%s簽名"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.crm_team_view_kanban_dashboard
 msgid "Order to Invoice"
-msgstr "已開立應收憑單"
+msgstr "訂單至發票"
 
 #. module: sale
 #. odoo-python
@@ -3427,13 +3421,13 @@ msgstr "付款方式"
 #. module: sale
 #: model:ir.model,name:sale.model_payment_provider
 msgid "Payment Provider"
-msgstr "支付提供商"
+msgstr "付款服務商"
 
 #. module: sale
 #: model:ir.ui.menu,name:sale.payment_provider_menu
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Payment Providers"
-msgstr "支付提供商"
+msgstr "付款服務商"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order__reference
@@ -3535,7 +3529,7 @@ msgstr "價目表"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_res_config_settings__group_proforma_sales
 msgid "Pro-Forma Invoice"
-msgstr "形式發票應收憑單"
+msgstr "形式發票"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
@@ -3545,7 +3539,7 @@ msgstr "形式發票 #"
 #. module: sale
 #: model:res.groups,name:sale.group_proforma_sales
 msgid "Pro-forma Invoices"
-msgstr "形式發票應收憑單"
+msgstr "形式發票"
 
 #. module: sale
 #: model:ir.model,name:sale.model_product_template
@@ -3708,7 +3702,7 @@ msgstr "數量"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__qty_to_invoice
 msgid "Quantity To Invoice"
-msgstr "應收憑單數量"
+msgstr "待開立發票數量"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.view_order_form
@@ -3869,7 +3863,7 @@ msgstr "登記付款"
 #. module: sale
 #: model:ir.model.fields.selection,name:sale.selection__sale_advance_payment_inv__advance_payment_method__delivered
 msgid "Regular invoice"
-msgstr "一般應收憑單"
+msgstr "一般發票"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_template
@@ -4144,7 +4138,6 @@ msgstr "銷售訂單"
 #: model:ir.ui.menu,name:sale.menu_sales_config
 #: model_terms:ir.ui.view,arch_db:sale.crm_team_view_kanban_dashboard
 #: model_terms:ir.ui.view,arch_db:sale.portal_my_home_menu_sale
-#: model_terms:ir.ui.view,arch_db:sale.portal_my_home_sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_tree
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_quotation
 #: model_terms:ir.ui.view,arch_db:sale.view_order_product_search
@@ -4313,12 +4306,12 @@ msgstr "使用屬性(尺寸、顏色等)建立銷售產品的變體"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.view_order_form
 msgid "Send PRO-FORMA Invoice"
-msgstr "發送形式發票應收憑單"
+msgstr "傳送形式發票"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Send a product-specific email once the invoice is validated"
-msgstr "一旦憑單驗證發送一個特定產品的電子信件"
+msgstr "發票獲驗證後，立刻傳送該特定產品的電郵"
 
 #. module: sale
 #: model:onboarding.onboarding.step,description:sale.onboarding_onboarding_step_sample_quotation
@@ -4737,7 +4730,7 @@ msgstr "登記費用開支之前，必須先驗證連結至分析帳戶 %(accoun
 #: code:addons/sale/controllers/portal.py:0
 #, python-format
 msgid "The access token is invalid."
-msgstr "存取代碼(token)無效。"
+msgstr "存取權杖(token)無效。"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_advance_payment_inv__amount_to_invoice
@@ -4906,6 +4899,16 @@ msgid "There are existing"
 msgstr "有現有的"
 
 #. module: sale
+#. odoo-python
+#: code:addons/sale/wizard/sale_order_discount.py:0
+#, python-format
+msgid ""
+"There does not seem to be any discount product configured for this company "
+"yet. You can either use a per-line discount, or ask an administrator to "
+"grant the discount the first time."
+msgstr "該公司似乎尚未配置任何折扣產品。您可以使用按資料行折扣，或者請管理員首次給予折扣。"
+
+#. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid ""
 "This default value is applied to any new product created. This can be "
@@ -4935,7 +4938,7 @@ msgstr "這是承諾給客戶的交貨日期.一經設定後，訂單將根據�
 #: model:ir.model.fields,help:sale.field_account_payment__medium_id
 #: model:ir.model.fields,help:sale.field_sale_order__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr "這是傳達方法，例如，明信片、電子信件或橫幅廣告"
+msgstr "傳遞方式，例：明信片、電子郵件、橫幅廣告"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_account_bank_statement_line__source_id
@@ -4945,7 +4948,7 @@ msgstr "這是傳達方法，例如，明信片、電子信件或橫幅廣告"
 msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
-msgstr "這是連結來源，例如，搜尋引擎、其他域名或電子信件列表名稱"
+msgstr "連結的來源，例：搜尋引擎、其他網站，或電郵清單的名稱"
 
 #. module: sale
 #. odoo-python
@@ -5180,7 +5183,7 @@ msgstr "不含稅金額"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report__untaxed_amount_invoiced
 msgid "Untaxed Amount Invoiced"
-msgstr "不含稅已開立應收憑單金額"
+msgstr "已開立發票的稅前金額"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__untaxed_amount_to_invoice
@@ -5191,7 +5194,7 @@ msgstr "不含稅待開立應收憑單金額"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__untaxed_amount_invoiced
 msgid "Untaxed Invoiced Amount"
-msgstr "不含稅的應收憑單金額"
+msgstr "未連稅已開立發票金額"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report__price_subtotal
@@ -5429,6 +5432,7 @@ msgstr ""
 "                無論是可庫存產品、消耗品還是服務。"
 
 #. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.portal_my_home_sale
 #: model_terms:ir.ui.view,arch_db:sale.portal_my_orders
 msgid "Your Orders"
 msgstr "你的訂單"

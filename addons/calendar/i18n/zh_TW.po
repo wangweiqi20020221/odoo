@@ -1058,7 +1058,7 @@ msgstr "您確定要刪除此記錄嗎？"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_attachment_count
 msgid "Attachment Count"
-msgstr "附件數"
+msgstr "附件數目"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_attendee__partner_id
@@ -2285,7 +2285,7 @@ msgstr "Outlook 行事曆"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_provider_config__microsoft_outlook_client_identifier
 msgid "Outlook Client Id"
-msgstr "Outlook 客户端識別碼"
+msgstr "Outlook 客戶端識別碼"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_provider_config__microsoft_outlook_client_secret
@@ -2395,7 +2395,7 @@ msgstr "重複"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_recurrence__until
 msgid "Repeat Until"
-msgstr "重複直到"
+msgstr "重複直至"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
@@ -2474,7 +2474,7 @@ msgstr "第二個"
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "Select attendees..."
-msgstr "選擇與會者..."
+msgstr "選取參加者⋯"
 
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
@@ -2771,7 +2771,7 @@ msgstr "單位"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__until
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "Until"
-msgstr "直到"
+msgstr "直至"
 
 #. module: calendar
 #: model:mail.template,description:calendar.calendar_template_meeting_update

@@ -1489,7 +1489,7 @@ msgstr ""
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_sheet_view_search
 msgid "Not Refused"
-msgstr "Tidak Ditola"
+msgstr "Tidak Ditolak"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_form
@@ -1661,6 +1661,14 @@ msgstr "Pembayaran"
 #: model_terms:product.template,description:hr_expense.expense_product_communication_product_template
 msgid "Phone bills, postage, etc."
 msgstr "Tagihan telepon, ongkos kirim, dsb."
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid ""
+"Please specify an expense journal in order to generate accounting entries."
+msgstr "Mohon tentukan jurnal pengeluaran agar dapat membuat entri akuntansi"
 
 #. module: hr_expense
 #. odoo-javascript
@@ -1930,7 +1938,7 @@ msgstr "layar"
 #: model:ir.model.fields,field_description:hr_expense.field_account_move__show_commercial_partner_warning
 #: model:ir.model.fields,field_description:hr_expense.field_account_payment__show_commercial_partner_warning
 msgid "Show Commercial Partner Warning"
-msgstr ""
+msgstr "Tunjukkan Peringatan Partner Komersil"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_sheet_view_search
@@ -2168,6 +2176,27 @@ msgid ""
 "form"
 msgstr ""
 "Kurang email kerja beberapa karyawan. Mohon tambahkan ke formulir karyawan"
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid "Employee(s) should have a bank account set."
+msgstr "Karyawan seharusnya memiliki akun bank."
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid "Go to Employee(s)"
+msgstr "Pergi ke Karyawan"
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense_sheet.py:0
+#, python-format
+msgid "Employee(s)"
+msgstr "Karyawan"
 
 #. module: hr_expense
 #. odoo-python

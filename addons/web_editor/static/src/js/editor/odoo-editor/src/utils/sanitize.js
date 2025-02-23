@@ -24,6 +24,7 @@ import {
     getTraversedNodes,
     ZERO_WIDTH_CHARS_REGEX,
     isVisible,
+    cleanZWS,
 } from './utils.js';
 
 const NOT_A_NUMBER = /[^\d]/g;
@@ -122,7 +123,7 @@ export function deduceURLfromText(text, link) {
    // Check for telephone url.
    match = label.match(PHONE_REGEX);
    if (match) {
-       return match[1] ? match[0] : 'tel://' + match[0];
+        return (match[1] ? match[0] : "tel:" + match[0]).replace(/\s+/g, "");
    }
    return null;
 }
@@ -148,6 +149,20 @@ function sanitizeNode(node, root) {
         node.setAttribute('contenteditable', 'false');
     }
 
+    // Ensure zws and data-oe-zws-empty-inline flag is removed if content other
+    // than zws is present in the node.
+    if (
+        node.nodeType === Node.ELEMENT_NODE &&
+        node.hasAttribute("data-oe-zws-empty-inline") &&
+        node.textContent !== "\u200B"
+    ) {
+        const restoreCursor =
+            shouldPreserveCursor(node, root) && preserveCursor(root.ownerDocument);
+        cleanZWS(node);
+        delete node.dataset.oeZwsEmptyInline;
+        restoreCursor && restoreCursor();
+    }
+
     // Remove empty class/style attributes.
     for (const attributeName of ['class', 'style']) {
         if (node.nodeType === Node.ELEMENT_NODE && node.hasAttribute(attributeName) && !node.getAttribute(attributeName)) {
@@ -160,6 +175,7 @@ function sanitizeNode(node, root) {
         && !node.hasAttributes()
         && !hasPseudoElementContent(node, "::before")
         && !hasPseudoElementContent(node, "::after")
+        && !node.querySelector(".oe_currency_value")
     ) {
         // Unwrap the contents of SPAN and FONT elements without attributes.
         getDeepRange(root, { select: true });
